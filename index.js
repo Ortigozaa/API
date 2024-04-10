@@ -31,12 +31,22 @@ app.get('/players', async (req, res) => {
     }
 })
 
-app.get('/hola', async (req, res) => {
+app.get('/holaaa', async (req, res) => {
   try{
-    res.status(200).send({"msg": "HOLA"})
+    res.status(200).send({"msg": "HOLAAA"})
     }catch(e){
       res.status(500).send({'error': 'Internal server error'})
     }
+})
+
+app.post('/jugadores', async (req, res) => {
+  try{
+    res.status(200).send({
+      "recibi": req.body
+    })
+  }catch(e){
+    res.status(500).send({'error': 'Internal server error'})
+  }
 })
 
 app.get('/boom', async (req, res) => {
