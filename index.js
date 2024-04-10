@@ -31,6 +31,14 @@ app.get('/players', async (req, res) => {
     }
 })
 
+app.get('/hola', async (req, res) => {
+  try{
+    res.status(200).send({"msg": "HOLA"})
+    }catch(e){
+      res.status(500).send({'error': 'Internal server error'})
+    }
+})
+
 app.get('/boom', async (req, res) => {
   res.status(500).json({ message: "My bad" })
 })
