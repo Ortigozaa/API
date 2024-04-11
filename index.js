@@ -31,7 +31,7 @@ app.get('/players', async (req, res) => {
     }
 })
 
-app.get('/hola', async (req, res) => {
+app.get('/', async (req, res) => {
   try{
     res.status(200).send({"msg": "¿Como estas?"})
     }catch(e){
