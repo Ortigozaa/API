@@ -33,7 +33,15 @@ app.get('/players', async (req, res) => {
 
 app.get('/', async (req, res) => {
   try{
-    res.status(200).send({"msg": "¿Como estas?"})
+    res.status(200).send({"msg": "Hola esta es la pagina principal :)"})
+    }catch(e){
+      res.status(500).send({'error': 'Internal server error'})
+    }
+})
+
+app.get('/ayuda', async (req, res) => {
+  try{
+    res.status(200).send({"msg": "En que te podemos ayudar??"})
     }catch(e){
       res.status(500).send({'error': 'Internal server error'})
     }
